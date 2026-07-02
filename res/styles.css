@@ -1,3 +1,7 @@
+/**************
+*** General ***
+**************/
+
 body {
     margin: 0;
     padding: 0;
@@ -5,4 +9,55 @@ body {
     background-color: #20282a;
     color: #fff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div.main {
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    position: relative;
+}
+
+div.center-section {
+    background-color: rgba(80, 80, 80, 0.8);
+    width: 78%;
+    padding: 2em 4em;
+    margin: 3em auto;
+    border-radius: 16px;
+}
+
+h1 {
+    font-size: 4em;
+    margin: auto;
+}
+
+h2 {
+    font-size: 1.85em;
+    margin: 0.9em auto 0.6em auto;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+/******************
+*** Fun visuals ***
+******************/
+
+@keyframes parallax {
+    from {top: 25vh;}
+    to {top: 10vh;}
+}
+
+div.parallax {
+    background: linear-gradient(transparent,rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.07), transparent);
+    width: 200vw;
+    height: 220px;
+    transform: rotate(350deg) translate(-50vw);
+    position: absolute;
+    z-index: -1;
+
+    animation: parallax linear;
+    animation-timeline: scroll();
 }
