@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="res/styles.css">
   <title>Home - Casey Cashman</title>
+
+  <link rel="stylesheet" href="res/styles.css">
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery-ui-1.13.3/jquery-ui.js"></script>
+  <script src="scripts/index.js"></script>
 </head>
+
 <body>
-  <div class="main">
+  <div class="page-container">
     <div class="parallax"></div>
     
     <div class="center-section">
@@ -15,21 +20,37 @@
       <p>This website is still under construction.</p>
     </div>
 
-    <div class="center-section">
-      <h1>Casey Cashman</h1>
-      <p>Welcome to my website!  This space will soon feature my resume as well as links to various projects I have done.</p>
+    <div id="main" class="center-section">
+      <ul id="main-tabs-nav">
+        <li><a href="#home"><span>Home</span></a></li>
+        <li><a href="#resume"><span>Resume and Work Experience</span></a></li>
+        <li><a href="#showcase"><span>Showcase</span></a></li>
+      </ul>
 
-      <h2>Work Experience</h2>
-      <p>A brief overview of my work experience will go here.</p>
+      <div id="home" class="selected">
+        <h1>Casey Cashman</h1>
+        <p>Welcome to my website!  This space will soon feature my resume as well as links to various projects I have done.</p>
 
-      <h2>Resume</h2>
-      <p>A link downloadable PDF of my resume will go here when it is complete.</p>
+        <h2>Contact Information</h2>
+        <p><b>Email:</b> <a href="mailto:kcashman843@gmail.com" target="_blank">kcashman843@gmail.com</a></p>
+        <p><b>Phone:</b> <a href="tel:9102778198">(920) 277-8198</a></p>
+      </div>
 
-      <h2>Projects</h2>
-      <p>Links to my various projects will go here.</p>
+      <div id="resume">
+        <h2>Work Experience</h2>
+        <p>A brief overview of my work experience will go here.</p>
 
-      <h2>Contact Information</h2>
-      <p>My contact information will be added here shortly.</p>
+        <h2>Resume</h2>
+        <p>A link downloadable PDF of my resume will go here when it is complete.</p>
+      </div>
+
+      <div id="showcase">
+        <h2>Capstone</h2>
+        <p>A description and video of my college capstone project will go here.</p>
+
+        <h2>Projects</h2>
+        <p>Links to my various projects will go here.</p>
+      </div>
     </div>
   </div>
 </body>

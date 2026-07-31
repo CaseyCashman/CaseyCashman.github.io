@@ -1,3 +1,12 @@
+/****************
+*** Variables ***
+****************/
+
+:root {
+    --text-color: #fff;
+}
+
+
 /**************
 *** General ***
 **************/
@@ -9,21 +18,6 @@ body {
     background-color: #20282a;
     color: #fff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-div.main {
-    margin: 0;
-    padding: 0;
-    overflow-x: clip;
-    position: relative;
-}
-
-div.center-section {
-    background-color: rgba(80, 80, 80, 0.8);
-    width: 78%;
-    padding: 2em 4em;
-    margin: 3em auto;
-    border-radius: 16px;
 }
 
 h1 {
@@ -40,6 +34,76 @@ p {
     font-size: 1.2em;
 }
 
+a {
+    color: #fc4;
+    &:hover {
+        color: #fa2
+    }
+}
+
+div.page-container {
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    position: relative;
+}
+
+div.center-section {
+    background-color: rgba(80, 80, 80, 0.8);
+    width: 78%;
+    padding: 2em 4em;
+    margin: 3em auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+/*****************
+*** Navigation ***
+*****************/
+
+#main-tabs-nav {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    margin: -2em -4em 1em -4em;
+    padding: 0;
+
+    & li {
+        list-style-type: none;
+        background-color: rgba(120, 120, 120, 0.2);
+
+        &:hover {
+            background-color: rgba(180, 180, 180, 0.2);
+        }
+
+        &::before {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: url("noise.png");
+            background-repeat: repeat;
+            background-color: transparent;
+            opacity: 8%;
+            content: "";
+        }
+    }
+
+    & li a {
+        padding: 1.5em;
+        display: inline-block;
+        width: stretch;
+        text-decoration: none;
+        color: #fff;
+        translate: 0 -4.5em;
+    }
+
+    & li a span {
+        display: block;
+        justify-self: center;
+        font-size: 1.2em;
+    }
+}
+
 
 /******************
 *** Fun visuals ***
@@ -53,7 +117,7 @@ p {
 div.parallax {
     background: linear-gradient(transparent,rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.07), transparent);
     width: 200vw;
-    height: 220px;
+    height: 240px;
     transform: rotate(350deg) translate(-50vw);
     position: absolute;
     z-index: -1;
