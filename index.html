@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Casey Cashman</title>
+  <title>Casey Cashman</title>
 
-  <link rel="stylesheet" href="res/styles.css">
+  <link rel="stylesheet" href="styles.css">
   <script src="scripts/jquery-3.7.1.min.js"></script>
   <script src="scripts/jquery-ui-1.13.3/jquery-ui.js"></script>
   <script src="scripts/index.js"></script>
@@ -13,44 +13,74 @@
 
 <body>
   <div class="page-container">
-    <div class="parallax"></div>
-    
-    <div class="center-section">
-      <h2>Please excuse the dust!</h2>
-      <p>This website is still under construction.</p>
-    </div>
+    <div class="parallax"></div> <!--TODO fix parallax making bottom of screen scroll too far-->
 
     <div id="main" class="center-section">
       <ul id="main-tabs-nav">
         <li><a href="#home"><span>Home</span></a></li>
         <li><a href="#resume"><span>Resume and Work Experience</span></a></li>
         <li><a href="#showcase"><span>Showcase</span></a></li>
-      </ul>
+      </ul> <!--end navbar-->
 
       <div id="home" class="selected">
         <h1>Casey Cashman</h1>
-        <p>Welcome to my website!  This space will soon feature my resume as well as links to various projects I have done.</p>
+        <p>Welcome to my website!  This space will soon feature my resume as well as information about various projects I have done.</p> <!--TODO-->
 
+        <div class="hbreak"></div>
         <h2>Contact Information</h2>
         <p><b>Email:</b> <a href="mailto:kcashman843@gmail.com" target="_blank">kcashman843@gmail.com</a></p>
-        <p><b>Phone:</b> <a href="tel:9102778198">(920) 277-8198</a></p>
-      </div>
+        <p><b>Phone:</b> <a href="tel:9102778198" target="_blank">(920) 277-8198</a></p>
+        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/casey-cashman-99750a2a3" target="_blank">My Profile</a></p>
+      </div> <!--end home tab-->
+
 
       <div id="resume">
-        <h2>Work Experience</h2>
-        <p>A brief overview of my work experience will go here.</p>
-
         <h2>Resume</h2>
-        <p>A link downloadable PDF of my resume will go here when it is complete.</p>
-      </div>
+        <p>A link to download a PDF of my resume will go here when it is complete.</p> <!--TODO-->
+        <p>An expandable browser view of my resume may go here when it is complete.</p> <!--TODO, or should I only have the download link?-->
+
+        <div class="hbreak"></div>
+        <h2>Work Experience</h2>
+        <p>A brief overview of my work experience will go here.</p> <!--TODO-->
+      </div> <!--end resume tab-->
+
 
       <div id="showcase">
         <h2>Capstone</h2>
-        <p>A description and video of my college capstone project will go here.</p>
+        <p>In 2025, I and one other student created an application to help teachers with their yearly schedules.  Additional information about this project will go here.</p> <!--TODO-->
+        <p>Below is a short video example of how the finished product looked and behaved.</p>
+        <div class="video-container">
+          <video controls>
+            <source src="media/capstone demo.mp4" type="video/mp4" />
+          </video>
+        </div>
 
+        <div class="hbreak"></div>
         <h2>Projects</h2>
-        <p>Links to my various projects will go here.</p>
-      </div>
+        <p>Click on any project's name to view more information about it.</p>
+
+        <details>
+          <summary>
+            <img src="media/ukg logo.png" class="icon">
+            <h3>UKG Calendar Downloader</h3>
+            <p class="description">A useful tool that reads information from UKG, and converts it into ISO format for importing to Google Calendar.</p>
+          </summary>
+          <div class="hbreak small"></div>
+          <p>A description of my UKG Calendar Downloader project will go here.</p> <!--TODO-->
+          <p>Lorem ipsum dolor sit amet.</p>
+        </details>
+
+        <details>
+          <summary>
+            <img src="media/crosscode lea.png" class="icon">
+            <h3>CrossCode Save File Descriptions</h3>
+            <p class="description">A mod that allows the creation, saving, and display of short descriptions to differentiate save files in the indie game CrossCode.</p>
+          </summary>
+          <div class="hbreak small"></div>
+          <p>A description of my CC Save Descriptions project will go here.</p> <!--TODO-->
+          <p>Lorem ipsum dolor sit amet.</p>
+        </details>
+      </div> <!--end showcase tab-->
     </div>
   </div>
 </body>
