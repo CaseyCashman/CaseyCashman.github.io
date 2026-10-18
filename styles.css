@@ -4,6 +4,14 @@
 
 :root {
     --text-color: #fff;
+    --background-color: #20282a;
+
+    --light-yellow: #fd5;
+    --yellow: #fc4;
+    --orange: #fa1;
+    --light-teal: #29b;
+    --teal: #18a;
+    --blue: #069;
 }
 
 
@@ -14,10 +22,11 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #20282a;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+    & * {box-sizing: border-box;}
 }
 
 h1 {
@@ -35,9 +44,33 @@ p {
 }
 
 a {
-    color: #fc4;
+    color: var(--yellow);
     &:hover {
-        color: #fa2;
+        color: var(--orange);
+    }
+}
+
+details {
+    background-color: #20282a60;
+    padding: 0.8em 2em 0.4em;
+    margin: 1em 0;
+    border-radius: 10px;
+
+    & summary {cursor: pointer;}
+
+    & summary h3 {
+        color: var(--yellow);
+        font-size: 1.4em;
+        margin: 0.25em;
+        display: inline-block;
+    }
+
+    & summary img.icon {
+        height: 1.9em;
+        width: 1.9em;
+        margin: 0 0 0 0.5em;
+        position: relative;
+        top: 0.5em;
     }
 }
 
@@ -102,11 +135,11 @@ div.hbreak {
     }
 
     & li a {
-        padding: 1.5em;
-        display: inline-block;
-        width: stretch;
+        padding: 1.5em 0.5em;
+        display: flex;
+        justify-content: center;
         text-decoration: none;
-        color: #fff;
+        color: var(--text-color);
         position: relative;
         top: -4.5em;
     }
@@ -114,6 +147,7 @@ div.hbreak {
     & li a span {
         display: block;
         justify-self: center;
+        text-align: center;
         font-size: 1.3em;
         text-shadow: 2px 2px 1px rgba(40, 40, 40, 0.6);
     }
@@ -130,36 +164,50 @@ div.video-container {
     justify-content: center;
 
     & video {
-        max-height: 60vh;
+        max-height: 80vh;
         max-width: 85%;
     }
 }
 
-#showcase details {
-    background-color: #20282a60;
-    padding: 0.8em 1.5em 0.2em;
-    margin: 1em 0;
-    border-radius: 10px;
+div.img-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    & summary h3 {
-        color: #ffe9b0;
-        font-size: 1.4em;
-        margin: 0.25em;
-        display: inline-block;
-        cursor: pointer;
+    & img {
+        max-height: 80vh;
+        max-width: 85%;
+        margin: auto;
     }
 
-    & summary img.icon {
-        height: 1.9em;
-        width: 1.9em;
-        margin: 0 0 0 0.5em;
-        position: relative;
-        top: 0.5em;
-        cursor: pointer;
+    & p {
+        font-size: 1em;
+        margin: auto;
+        padding: 0.8em 0 0;
+    }
+}
+
+details .link-button {
+    border: none;
+    border-radius: 6px;
+    padding: 0.45em 1em;
+    margin: 0.25em;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: none;
+    color: var(--background-color);
+    float: right;
+    background-color: var(--yellow);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--light-yellow);
     }
 
-    & summary p {
-        padding: 0 0 0 0.8em;
+    &.disabled {
+        background-color: #888;
+        cursor: default;
     }
 }
 
@@ -183,4 +231,36 @@ div.parallax {
 
     animation: parallax linear;
     animation-timeline: view();
+}
+
+
+/*************************
+*** Small screen sizes ***
+*************************/
+
+@media only screen and (max-width: 680px) {
+    h1 {font-size: 3em;}
+    h2 {font-size: 1.65em;}
+    p {font-size: 1.1em;}
+    div.parallax {display: none;}
+    div.page-container {width: 100%;}
+
+    div.center-section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 2em 7%;
+        margin: 0 auto;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    #main-tabs-nav {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: -2em -8% 2em;
+        & li:hover, & li.ui-state-active {background-image:none; background-color: #ffffff20;}
+    }
+
+    div.video-container video {max-width: 100%;}
+    div.img-container img {max-width: 100%;}
 }
