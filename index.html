@@ -18,19 +18,21 @@
     <div id="main" class="center-section">
       <ul id="main-tabs-nav">
         <li><a href="#home"><span>Home</span></a></li>
-        <li><a href="#resume"><span>Resume and Work Experience</span></a></li>
+        <li><a href="#resume"><span>Work Experience</span></a></li>
         <li><a href="#showcase"><span>Showcase</span></a></li>
       </ul> <!--end navbar-->
 
       <div id="home" class="selected">
         <h1>Casey Cashman</h1>
-        <p>Welcome to my website!  This space will soon feature my resume as well as information about various projects I have done.</p> <!--TODO-->
+        <p>Welcome to my website!  Explore the different tabs to find information about work and projects I have done.</p>
+        <p>This page was created from scratch.  No templates were used, and the only external library accessed is JQuery.</p>
 
         <div class="hbreak"></div>
         <h2>Contact Information</h2>
         <p><b>Email:</b> <a href="mailto:kcashman843@gmail.com" target="_blank">kcashman843@gmail.com</a></p>
         <p><b>Phone:</b> <a href="tel:9102778198" target="_blank">(920) 277-8198</a></p>
         <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/casey-cashman-99750a2a3" target="_blank">My Profile</a></p>
+        <p>Please contect me with any questions or concerns.</p>
       </div> <!--end home tab-->
 
 
@@ -41,7 +43,49 @@
 
         <div class="hbreak"></div>
         <h2>Work Experience</h2>
-        <p>A brief overview of my work experience will go here.</p> <!--TODO-->
+        <details>
+          <summary>
+            <img src="media/sourcer logo.png" class="icon">
+            <h3>Sourcer AI</h3>
+            <p>Application Designer and Programmer - Since December 2023</p>
+          </summary>
+          <div class="hbreak small"></div>
+          <p>A description of this position will go here.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </details>
+
+        <details>
+          <summary>
+            <img src="media/kwik trip logo.png" class="icon">
+            <h3>Kwik Trip</h3>
+            <p>Guest Service Representative - Since September 2025</p>
+          </summary>
+          <div class="hbreak small"></div>
+          <p>A description of this position will go here.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </details>
+
+        <details>
+          <summary>
+            <img src="media/uwsp logo.png" class="icon">
+            <h3>University of Wisconsin-Stevens Point</h3>
+            <p>Residence Hall Front Desk - September 2021 to May 2023</p>
+          </summary>
+          <div class="hbreak small"></div>
+          <p>A description of this position will go here.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </details>
+
+        <details>
+          <summary>
+            <img src="media/rogans logo.png" class="icon">
+            <h3>Rogan's Shoes</h3>
+            <p>Customer Service Representative - July 2019 to August 2021</p>
+          </summary>
+          <div class="hbreak small"></div>
+          <p>A description of this position will go here.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </details>
       </div> <!--end resume tab-->
 
 
@@ -63,22 +107,28 @@
           <summary>
             <img src="media/ukg logo.png" class="icon">
             <h3>UKG Calendar Downloader</h3>
-            <p class="description">A useful tool that reads information from UKG, and converts it into ISO format for importing to Google Calendar.</p>
+            <a class="link-button disabled">View Project on GitHub</a>
+            <p class="description">A useful tool that reads information from UKG, and converts it into a downloadable file for importing to Google Calendar.</p>
           </summary>
           <div class="hbreak small"></div>
-          <p>A description of my UKG Calendar Downloader project will go here.</p> <!--TODO-->
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>This browser extension adds the ability to export a copy of your monthly calendar from UKG.  I prefer to keep all of my events in one place, and since UKG doesn't offer a convenient way to automatically add shifts to Google Calendar, I decided to create a way myself.</p>
+          <p>The extension pulls information about your shifts from the webpage, then uses it to create an ICS (Internet Calendaring and Scheduling) file, which is automatically downloaded to the computer and ready to be imported into any compatible calendar.</p>
         </details>
 
         <details>
           <summary>
             <img src="media/crosscode lea.png" class="icon">
             <h3>CrossCode Save File Descriptions</h3>
-            <p class="description">A mod that allows the creation, saving, and display of short descriptions to differentiate save files in the indie game CrossCode.</p>
+            <a class="link-button" href="https://github.com/CaseyCashman/cc-save-descriptions" target="_blank">View Project on GitHub</a>
+            <p class="description">A simple mod that allows the creation, saving, and display of short descriptions to differentiate save files in the indie game CrossCode.</p>
           </summary>
           <div class="hbreak small"></div>
-          <p>A description of my CC Save Descriptions project will go here.</p> <!--TODO-->
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>This mod is a small, quality-of-life tweak to one of my favorite indie games.  After creating several save files, I noticed an issue - that keeping track of them could be difficult, as they all appeared largely the same on the file select screen.</p>
+          <p>I decided to take matters into my own hands and create a mod to fix it.  I made use of an already-existing text display on the screen to show a short, customizable description of the user's save files.</p>
+          <div class="img-container">
+            <img src="media/cc descriptions example.gif">
+            <p>Before vs after applying the mod</p>
+          </div>
         </details>
       </div> <!--end showcase tab-->
     </div>
